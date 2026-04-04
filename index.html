@@ -6,63 +6,79 @@
 
 <style>
 body {
-    font-family: Arial;
-    background-color: #eeeeee;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
     text-align: center;
 }
 
 header {
     background-color: gray;
     color: white;
-    padding: 10px;
-}
-
-nav {
-    margin: 10px;
+    padding: 15px;
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
-    margin: 5px;
+    color: black; 
+    text-decoration: underline;
+    margin: 10px;
 }
 
 section {
-    width: 70%;
-    margin: 15px auto;
-    background: white;
-    padding: 10px;
-    border: 1px solid black;
+    width: 90%;
+    margin: 20px auto;
 }
 
-table {
+table { 
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border-collapse: collapse;
 }
 
-table, th, td {
-    border: 1px solid black;
+table { 
+    border: 1px solid black; 
 }
 
 th {
+    border: 1px solid black;
     background-color: lightgray;
 }
 
 td {
+    border: 1px solid black; 
     padding: 5px;
 }
 
-article {
-    margin-top: 10px;
+.articulos {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 15px; 
+    justify-content: center;
 }
 
-footer {
-    background-color: gray;
-    color: white;
-    padding: 10px;
-    margin-top: 10px;
+article { 
+    background-color: white;
+    padding: 15px; 
+    border: 1px solid black;    
 }
-</style>
+
+article:hover {
+    background-color: black;
+    color: white;
+}
+
+footer { 
+    background-color: #c9d2d0;
+    color: #31231e; 
+    padding: 15px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .articulos {
+        grid-template-columns: 1fr;
+    }
+}</style>
 
 </head>
 
