@@ -57,10 +57,10 @@ td {
 
 .articulos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 200px);
+    justify-content: center;
     gap: 15px;
     margin-top: 20px;
-    justify-content: center; 
 }
 
 article {
@@ -94,7 +94,7 @@ footer {
 <body>
 
 <header>
-<h1>El Faro</h1>
+<h1 id="titulo">El Faro</h1>
 <img src="faro.png" width="100">
 </header>
 
@@ -122,14 +122,14 @@ footer {
 </tr>
 
 <tr>
-<td>Debate por seguridad en cables submarinos</td>
+<td>Debate por seguridad en cables submarinos de internet</td>
 <td>Tecnología</td>
-<td>Expertos señalan que el riesgo no está en la tecnología, sino en las leyes que obligan a compartir información.</td>
+<td>Expertos señalan que el riesgo no está en la tecnología, sino en las leyes que obligan a compartir información con gobiernos.</td>
 </tr>
 
 <tr>
-<td>Economista critica manejo del alza</td>
-<td>Política</td>
+<td>Economista critica manejo del alza de combustibles</td>
+<td>Política económica</td>
 <td>Andrea Repetto cuestionó la decisión del gobierno de no suavizar el aumento del petróleo.</td>
 </tr>
 </table>
@@ -147,26 +147,27 @@ footer {
 <div class="articulos">
 
 <article>
-<h3>Fuerte alza en combustibles</h3>
+<h3>Alza de combustibles</h3>
 <p><b>Categoría:</b> Economía</p>
-<p>El alza genera preocupación por el costo de vida.</p>
+<p>El aumento impacta directamente el costo de vida.</p>
 </article>
 
 <article>
 <h3>Seguridad en internet</h3>
 <p><b>Categoría:</b> Tecnología</p>
-<p>Debate por uso de datos en cables submarinos.</p>
+<p>Preocupación por el uso de datos en cables submarinos.</p>
 </article>
 
 <article>
-<h3>Crítica económica</h3>
+<h3>Crítica al gobierno</h3>
 <p><b>Categoría:</b> Política</p>
-<p>Se cuestiona el manejo del precio del petróleo.</p>
+<p>Se cuestiona el manejo del alza del petróleo.</p>
 </article>
 
 </div>
 
 </section>
+
 <section id="deporte">
 
 <h2>Deportes</h2>
@@ -174,21 +175,21 @@ footer {
 <div class="articulos">
 
 <article>
-<h3>Nuevas fechas torneo nacional</h3>
+<h3>Programan nuevas fechas del torneo</h3>
 <p><b>Categoría:</b> Fútbol</p>
-<p>La ANFP confirmó la programación de las fechas 8 y 9 del campeonato nacional.</p>
+<p>La ANFP confirmó fechas 8 y 9 del campeonato.</p>
 </article>
 
 <article>
-<h3>Título juvenil de Wanderers</h3>
+<h3>Wanderers campeón Sub-20</h3>
 <p><b>Categoría:</b> Internacional</p>
-<p>Santiago Wanderers ganó la Copa Libertadores Sub-20 en penales.</p>
+<p>Ganó la Libertadores juvenil en penales.</p>
 </article>
 
 <article>
 <h3>Leyendas del fútbol en Chile</h3>
 <p><b>Categoría:</b> Evento</p>
-<p>Chile será sede del torneo Duelo Leyendas de América 2026.</p>
+<p>Se realizará el torneo Duelo Leyendas 2026.</p>
 </article>
 
 </div>
@@ -203,20 +204,20 @@ footer {
 
 <article>
 <h3>Startups chilenas se expanden</h3>
-<p>Categoría: Emprendimiento</p>
-<p>Buscan nuevos mercados internacionales.</p>
+<p><b>Categoría:</b> Emprendimiento</p>
+<p>Buscan llegar a mercados internacionales.</p>
 </article>
 
 <article>
-<h3>Financiamiento para pymes</h3>
-<p>Categoría: Economía</p>
-<p>Más apoyo a empresas innovadoras.</p>
+<h3>Más financiamiento para pymes</h3>
+<p><b>Categoría:</b> Economía</p>
+<p>Se impulsa la innovación empresarial.</p>
 </article>
 
 <article>
 <h3>Emprendimientos verdes</h3>
-<p>Categoría: Sustentabilidad</p>
-<p>Crecen negocios ecológicos en Chile.</p>
+<p><b>Categoría:</b> Sustentabilidad</p>
+<p>Aumentan por el interés en el medio ambiente.</p>
 </article>
 
 </div>
@@ -227,7 +228,11 @@ footer {
 <p>El Faro 2026</p>
 </footer>
 
-</body>
-</html>
+<script>
+document.getElementById("titulo").onclick = function(){
+alert("Bienvenido al periódico El Faro");
+}
+</script>
+
 </body>
 </html>
