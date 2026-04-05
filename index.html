@@ -56,9 +56,8 @@ td {  /*espacio interno entremedio de las celdas de 5 pixeles */
     padding: 5px;
 }
 
-.articulos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.articulos { /* creamos el grid, creamos tantas columnas como quepan, cada una de mínimo 200px, y que se estiren para llenar el espacio*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
