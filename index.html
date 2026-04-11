@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>El Faro</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> <!-- Importamos la fuente de Google -->
@@ -57,6 +56,7 @@ td {  /*espacio interno entremedio de las celdas de 5 pixeles */
 }
 
 .articulos { /* creamos el grid, creamos tantas columnas como quepan, cada una de mínimo 200px, y que se estiren para llenar el espacio*/
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 100%;
     max-width: 1200px;
@@ -83,6 +83,31 @@ footer {  /* color de fondo del footer, color de texto, espacio interno y espaci
     margin-top: 20px;
 }
 
+input, textarea {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 16px; 
+
+    padding: 10px;
+    border: 1px solid black;
+    width: 80%; 
+    max-width: 400px;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+
 @media (max-width: 600px) { /* en las pantallas de maximo 600 px se muestra una sola columna */
     .articulos {
         grid-template-columns: 1fr;
@@ -95,6 +120,7 @@ footer {  /* color de fondo del footer, color de texto, espacio interno y espaci
 <body>
 
 <header>
+<p id="fechahora"></p>
 <h1 id="titulo">El Faro</h1>
 <img src="faro.png" width="100">
 </header>
@@ -108,7 +134,14 @@ footer {  /* color de fondo del footer, color de texto, espacio interno y espaci
 <section id="inicio">
 
 <h2>Noticias Generales</h2>
+<h3>Agregar nuevo artículo</h3>
+<article>
+<input type="text" id="tituloArticulo" ><br><br>
+<textarea id="textoArticulo" ></textarea><br><br>
 
+
+<button onclick="agregarArticulo()">Agregar artículo</button>
+</article>
 <table>
 <tr>
 <th>Título</th>
@@ -223,13 +256,30 @@ footer {  /* color de fondo del footer, color de texto, espacio interno y espaci
 
 </div>
 
+
+</section>
+
+<section id="contacto">
+
+<h2>Contacto</h2>
+
+<article>
+<input type="text" id="nombre" placeholder="Tu nombre"><br><br>
+
+<textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea><br><br>
+
+<button onclick="enviarMensaje()">Enviar</button>
+</article>
+
+<p id="respuesta"></p>
+
 </section>
 
 <footer>
 <p>El Faro 2026</p>
 </footer>
 
-
+<script src="javascript.js"></script>
 
 </body>
 </html>
