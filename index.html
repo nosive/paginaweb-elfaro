@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>El Faro</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> <!-- Importamos la fuente de Google -->
@@ -56,9 +55,9 @@ td {  /*espacio interno entremedio de las celdas de 5 pixeles */
     padding: 5px;
 }
 
-.articulos {
-    display: grid; 
-    grid-template-columns: 1fr; 
+.articulos { /* creamos el grid, creamos tantas columnas como quepan, cada una de mínimo 200px, y que se estiren para llenar el espacio*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
@@ -135,6 +134,8 @@ button:hover {
 <section id="inicio">
 
 <h2>Noticias Generales</h2>
+<p>Total de artículos: <span id="contador-inicio"></span></p>
+
 <h3>Agregar nuevo artículo</h3>
 <article>
 <input type="text" id="tituloArticulo" ><br><br>
@@ -188,12 +189,14 @@ button:hover {
 </article>
 
 <article>
+
 <h3>Seguridad en internet</h3>
 <p><b>Categoría:</b> Tecnología</p>
 <p>Preocupación por el uso de datos en cables submarinos.</p>
 </article>
 
 <article>
+
 <h3>Crítica al gobierno</h3>
 <p><b>Categoría:</b> Política</p>
 <p>Se cuestiona el manejo del alza del petróleo.</p>
@@ -206,6 +209,7 @@ button:hover {
 <section id="deporte">
 
 <h2>Deportes</h2>
+<p>Total de artículos: <span id="contador-deporte"></span></p>
 
 <div class="articulos">
 
@@ -234,7 +238,7 @@ button:hover {
 <section id="negocios">
 
 <h2>Negocios</h2>
-
+<p>Total de artículos: <span id="contador-negocios"></span></p>
 <div class="articulos">
 
 <article>
@@ -283,4 +287,4 @@ button:hover {
 <script src="javascript.js"></script>
 
 </body>
-</html>
+</html>     
