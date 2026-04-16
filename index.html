@@ -2,41 +2,59 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>El Faro</title>
 
-<!-- Importamos Bootstrap para diseño moderno y responsive -->
+<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Importamos fuente desde Google -->
+<!-- Fuente -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
 
-/* Definimos fuente general y color de fondo */
+/* Fuente general y fondo */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
 }
 
-/* Clase utilizada por JavaScript para identificar los artículos */
+/* Contenedor de artículos usado por JS */
 .articulos {
     margin-top: 20px;
 }
 
-/* Definimos la animación base para las tarjetas */
+/* Animación base */
 .card {
     transition: transform 0.3s ease;
 }
 
-/* Efecto al pasar el mouse sobre las tarjetas */
+/* Hover */
 .card:hover {
     transform: scale(1.03);
 }
 
-/* Ajuste del tamaño del texto del footer */
+/* Footer */
 footer {
     font-size: 14px;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
 }
 
 </style>
@@ -44,28 +62,26 @@ footer {
 
 <body>
 
-<!-- Barra de avisos superior -->
+<!-- Aviso -->
 <div class="alert alert-warning text-center m-0">
  Última hora: Aumento de combustibles en Chile
 </div>
 
-<!-- Header principal del sitio -->
+<!-- Header -->
 <header class="bg-dark text-white text-center p-3">
-<p id="fechahora"></p> <!-- Aquí se muestra la fecha y hora con JavaScript -->
+<p id="fechahora"></p>
 <h1 id="titulo">El Faro</h1>
-<img src="faro.png" width="80">
+<img src="faro.png" class="img-fluid" style="max-width: 80px;">
 </header>
 
-<!-- Menú de navegación -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <div class="container">
 
-<!-- Botón para menú en dispositivos móviles -->
 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
 ☰
 </button>
 
-<!-- Opciones del menú -->
 <div class="collapse navbar-collapse" id="menu">
 <ul class="navbar-nav mx-auto">
 <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
@@ -77,13 +93,13 @@ footer {
 </div>
 </nav>
 
-<!-- Sección de noticias generales -->
+<!-- INICIO -->
 <section id="inicio" class="container mt-4">
 
 <h2>Noticias Generales</h2>
 <p>Total de artículos: <span id="contador-inicio"></span></p>
 
-<!-- Formulario para agregar artículos -->
+<!-- Formulario -->
 <div class="card p-3 mb-4">
 <h5>Agregar nuevo artículo</h5>
 
@@ -93,7 +109,8 @@ footer {
 <button class="btn btn-primary" onclick="agregarArticulo()">Agregar artículo</button>
 </div>
 
-<!-- Tabla de noticias -->
+<!-- Tabla responsive -->
+<div class="table-responsive">
 <table class="table table-bordered table-striped">
 <tr>
 <th>Título</th>
@@ -119,11 +136,11 @@ footer {
 <td>Se cuestiona la decisión del gobierno.</td>
 </tr>
 </table>
+</div>
 
-<!-- Sección multimedia -->
+<!-- Multimedia -->
 <div class="row text-center my-4">
 
-<!-- Video -->
 <div class="col-md-6">
 <h5>Video</h5>
 <video class="w-100" controls>
@@ -131,7 +148,6 @@ footer {
 </video>
 </div>
 
-<!-- Audio -->
 <div class="col-md-6">
 <h5>Audio</h5>
 <audio controls class="w-100">
@@ -141,12 +157,11 @@ footer {
 
 </div>
 
-<!-- Sección de artículos -->
+<!-- Artículos -->
 <h3>Artículos</h3>
 
 <div class="row articulos">
 
-<!-- Artículo 1 -->
 <div class="col-md-4">
 <div class="card mb-3">
 <div class="card-body">
@@ -157,7 +172,6 @@ footer {
 </div>
 </div>
 
-<!-- Artículo 2 -->
 <div class="col-md-4">
 <div class="card mb-3">
 <div class="card-body">
@@ -168,7 +182,6 @@ footer {
 </div>
 </div>
 
-<!-- Artículo 3 -->
 <div class="col-md-4">
 <div class="card mb-3">
 <div class="card-body">
@@ -183,7 +196,7 @@ footer {
 
 </section>
 
-<!-- Sección deportes -->
+<!-- DEPORTE -->
 <section id="deporte" class="container mt-5">
 
 <h2>Deportes</h2>
@@ -222,7 +235,7 @@ footer {
 
 </section>
 
-<!-- Sección negocios -->
+<!-- NEGOCIOS -->
 <section id="negocios" class="container mt-5">
 
 <h2>Negocios</h2>
@@ -258,7 +271,7 @@ footer {
 
 </section>
 
-<!-- Sección contacto -->
+<!-- CONTACTO -->
 <section id="contacto" class="container mt-5">
 
 <h2>Contacto</h2>
@@ -273,7 +286,7 @@ footer {
 
 </section>
 
-<!-- Footer del sitio -->
+<!-- FOOTER -->
 <footer class="bg-dark text-white mt-5 p-4">
 <div class="container">
 <div class="row">
@@ -296,10 +309,10 @@ footer {
 </div>
 </footer>
 
-<!-- Script de Bootstrap para funcionamiento del menú -->
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Archivo JavaScript propio -->
+<!-- Tu JS -->
 <script src="javascript.js"></script>
 
 </body>
