@@ -29,7 +29,7 @@ function agregarArticulo() {
         "<p>" + texto + "</p>" +
         "</div></div>";
 
-    contenedor.appendChild(nuevo);
+    contenedor.prepend(nuevo);
 
     document.getElementById("tituloArticulo").value = "";
     document.getElementById("textoArticulo").value = "";
