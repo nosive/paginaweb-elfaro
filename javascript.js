@@ -24,9 +24,9 @@ function agregarArticulo() {
     nuevo.innerHTML =
         "<div class='card mb-3'>" +
         "<div class='card-body'>" +
-        "<h5>" + titulo + "</h5>" +
+        "<h5><b>" + titulo + "</b></h5>" +
         "<p><b>Categoría:</b> General</p>" +
-        "<p>" + texto + "</p>" +
+        "<p><b>" + texto + "</b></p>" +
         "</div></div>";
 
     contenedor.prepend(nuevo);
